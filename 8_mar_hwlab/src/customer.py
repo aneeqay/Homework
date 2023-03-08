@@ -1,13 +1,14 @@
 class Customer:
     
-    def __init__(self, name, wallet):
+    def __init__(self, name, wallet, age):
         self.name = name
         self.wallet = wallet
+        self.age = age
+        self.drunkenness = 0
 
-    # def buy_drink(self, pub, drink_name):
-    #     # if drink_name == drink_n.name:
-    #         self.wallet -= drink_name.price
-    #         pub.till += drink_name.price
+    # def drink_drink(self, drink):
+    #     if self.drunkenness <= 15:
+    #         self.drunkenness += drink.alcohol_units
 
     # def buy_drink(self, pub, drink):
     #         self.wallet -= drink.price
