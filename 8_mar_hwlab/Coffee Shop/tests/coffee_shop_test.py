@@ -37,6 +37,12 @@ class TestCoffeeShop(unittest.TestCase):
         self.assertEqual(5, self.ava.wallet)
         self.assertEqual(100, self.beans.till)
 
-    
+    def test_sell_10_energy(self):
+        self.ted.drink_coffee(self.mocha)
+        self.ted.drink_coffee(self.latte)
+        self.beans.sell_coffee(self.ted, self.americano)
+        self.assertEqual(10, self.ted.wallet)
+        self.assertEqual(100, self.beans.till)
+
 
     

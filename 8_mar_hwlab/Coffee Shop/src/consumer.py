@@ -6,5 +6,5 @@ class Consumer:
         self.age = age
         self.energy = 0
 
-    def drink_coffee(self):
-        
+    def drink_coffee(self, coffee):
+        self.energy += coffee.caffeine

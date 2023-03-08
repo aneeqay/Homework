@@ -18,3 +18,5 @@ class TestCoffee(unittest.TestCase):
         self.assertEqual(5, self.mocha.caffeine)
         self.assertEqual(5, self.americano.caffeine)
         self.assertEqual(5, self.latte.caffeine)
+    
+    
