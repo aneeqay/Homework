@@ -13,7 +13,7 @@ class TestCoffeeShop(unittest.TestCase):
         self.latte = Coffee("latte", 3, 5)
         self.beans.drinks = [self.mocha, self.americano, self.latte]
         self.ted = Consumer("ted", 10, 30)
-        self.ava = Consumer("ava", 5, 15)
+        self.ava = Consumer("ava", 2.5, 15)
     
     def test_shop_has_name(self):
         self.assertEqual("beans", self.beans.name)
@@ -34,7 +34,7 @@ class TestCoffeeShop(unittest.TestCase):
 
     def test_sell_underage(self):
         self.beans.sell_coffee(self.ava, self.mocha)
-        self.assertEqual(5, self.ava.wallet)
+        self.assertEqual(2.5, self.ava.wallet)
         self.assertEqual(100, self.beans.till)
 
     def test_sell_10_energy(self):
@@ -44,5 +44,10 @@ class TestCoffeeShop(unittest.TestCase):
         self.assertEqual(10, self.ted.wallet)
         self.assertEqual(100, self.beans.till)
 
+    def test_coffee_list(self):
+        self.assertEqual(["mocha", "americano", "latte"], self.beans.coffee_list())
 
+    def test_can_consumer_afford_coffee(self):
+        list = self.beans.drinks_consumer_can_afford(self.ava)
+        self.assertEqual([self.americano], list)
     

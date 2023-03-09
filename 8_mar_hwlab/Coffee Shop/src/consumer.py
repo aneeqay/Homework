@@ -8,3 +8,6 @@ class Consumer:
 
     def drink_coffee(self, coffee):
         self.energy += coffee.caffeine
+
+    def eat_food(self, food):
+        self.energy -= food.rejuvenation

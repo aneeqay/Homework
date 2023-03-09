@@ -2,6 +2,7 @@ import unittest
 
 from src.consumer import Consumer
 from src.coffee import Coffee
+from src.food import Food
 
 class TestConsumer(unittest.TestCase):
 
@@ -9,6 +10,7 @@ class TestConsumer(unittest.TestCase):
         self.ted = Consumer("ted", 10, 30)
         self.ava = Consumer("ava", 5, 15)
         self.latte = Coffee("latte", 3, 5)
+        self.muffin = Food("muffin", 2.5, 2)
     
     def test_consumer_has_name(self):
         self.assertEqual("ted", self.ted.name)
@@ -29,3 +31,8 @@ class TestConsumer(unittest.TestCase):
     def test_energy_increase(self):
         self.ted.drink_coffee(self.latte)
         self.assertEqual(5, self.ted.energy)
+
+    def test_energy_decrease(self):
+        self.ted.drink_coffee(self.latte)
+        self.ted.eat_food(self.muffin)
+        self.assertEqual(3, self.ted.energy)
