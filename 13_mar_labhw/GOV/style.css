@@ -4,7 +4,8 @@ body {
 
 header {
     background: #000;
-    display: flex
+    display: flex;
+    color: white;
 }
 
 header a {
@@ -12,8 +13,24 @@ header a {
     text-decoration: none;
 }
 
+#menu {
+    position: absolute;
+    right: 10%;
+    top: 0.5%;
+}
+
+#glass {
+    position: absolute;
+    right: 5%;
+    top: 4%;
+}
+
+a {
+    color: #1d70b8;
+}
+
 img {
-    size: 50px 70px
+    size: 50px 70px;
 }
 
 .section1 {
@@ -26,10 +43,34 @@ img {
 }
 
 .search {
-    margin: 0px 35px;
+    margin: 0px 30px;
 }
 
-ul {
+#list {
     list-style: none;
-    display: flex
+    display: flex;
+}
+
+footer {
+    background: #f3f2f1;
+}
+
+footer a {
+    color: gray;
+}
+
+#footer-links > li {
+    display: inline-block;
+    color: #0b0c0c;
+    font-size: 0.8rem;
+}
+
+#footer-links {
+    list-style: none;
+}
+
+#logo {
+    position: absolute;
+    right: 5%;
+    bottom: 0%;
 }
