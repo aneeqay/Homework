@@ -3,10 +3,24 @@ body {
 }
 
 header {
-    background: #1d70b8;
+    background: #000;
+    display: flex
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    size: 50px 70px
 }
 
 .section1 {
+    background: #1d70b8;
+}
+
+.section2 {
     background: #f3f2f1;
     display: flex;
 }
@@ -15,14 +29,7 @@ header {
     margin: 0px 35px;
 }
 
-.topic-links {
-    display: ;
-}
-
-.topic-links > p {
+ul {
+    list-style: none;
     display: flex
 }
-
-/* .topic-1-text {
-    display: inline-flex
-} */
