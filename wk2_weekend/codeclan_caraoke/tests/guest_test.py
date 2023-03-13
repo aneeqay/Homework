@@ -9,7 +9,7 @@ class TestGuest(unittest.TestCase):
     def setUp(self):
         self.song1 = Song("Toxic", "Britney Spears")
         self.guest1 = Guest("Tom", self.song1, 50)
-        self.pop = Room(2, 5)
+        self.pop = Room(2, 5, 100)
 
     def test_guest_has_name(self):
         self.assertEqual("Tom", self.guest1.name)
@@ -22,5 +22,5 @@ class TestGuest(unittest.TestCase):
         self.assertEqual("Whoo!", self.guest1.fave_song_exclamation(self.pop))
 
     def test_pay_entry_fee(self):
-        self.guest1.pay_entry_fee(self.pop)
+        self.guest1.pay_entry_fee(self.pop.entry_fee)
         self.assertEqual(45, self.guest1.wallet)

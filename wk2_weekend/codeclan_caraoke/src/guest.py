@@ -9,5 +9,5 @@ class Guest:
         if self.fave_song in room.song_list:
             return "Whoo!"
         
-    def pay_entry_fee(self, room):
-        self.wallet -= room.entry_fee
+    def pay_entry_fee(self, entry_fee):
+        self.wallet -= entry_fee

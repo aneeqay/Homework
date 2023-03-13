@@ -1,0 +1,28 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background: #1d70b8;
+}
+
+.section1 {
+    background: #f3f2f1;
+    display: flex;
+}
+
+.search {
+    margin: 0px 35px;
+}
+
+.topic-links {
+    display: ;
+}
+
+.topic-links > p {
+    display: flex
+}
+
+/* .topic-1-text {
+    display: inline-flex
+} */
