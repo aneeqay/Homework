@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section>
+      {% for book in books %}  
+        <div class=book-card>
+        <p>
+        <a href="/books/{{books.index(book)}}">
+        <img src="{{url_for('static', filename='bookimage.png')}}" width="60" height="70"/>
+        </a></p>
+        <br>
+        <p class="book-text"><br>
+        <b>{{ book.title }}</b> 
+        <br>
+        <i>by</i>
+        <br>
+        {{ book.author }}
+        <br>
+        <b>Genre: </b>{{ book.genre }}
+      {% endfor %}</p>
+        </div>
+    </section>
+{% endblock %}

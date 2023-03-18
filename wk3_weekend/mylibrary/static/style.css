@@ -1,0 +1,65 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+}
+
+header {
+    color: #00acac;
+}
+
+h1 {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+li a {
+    text-decoration: none;
+    color: #04abac;
+    padding: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#homeimage {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    color: #00acac;
+    display: flex;
+    justify-content: center;
+}
+
+.book-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.book-text {
+    text-align: center;
+    color: #014040;
+}
+
+h3 {
+    color: #04abac;
+}
+
+.book-form {
+    display: flex;
+    flex-direction: column;
+    color: #014040;
+}

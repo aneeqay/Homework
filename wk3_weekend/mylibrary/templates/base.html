@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Library</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='favicon.png')}}"/>
+</head>
+<body>
+    <header>
+        <h1>My Library</h1>
+        <nav>
+            <ul>
+                <li><a href='/'>Home</a></li>
+                <li><a href='/books'>Catalogue</a></li>
+                <li><a href='/books/new'>Add Book</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+    <footer>
+        <p><em>“Books are a uniquely portable magic.” </em> - Stephen King</p>
+    </footer>
+</body>
+</html>
