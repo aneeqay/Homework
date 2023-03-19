@@ -6,4 +6,3 @@ class Book:
         self.genre = genre
         self.link = link
         self.image = image
-        

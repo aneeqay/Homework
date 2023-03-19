@@ -5,15 +5,15 @@ book2 = Book("Small Things Like These", "Claire Keegan", "Fiction - Historical",
 book3 = Book("Taste", "Stanley Tucci", "Non-Fiction - Memoir", "https://app.thestorygraph.com/books/9de3288b-b28f-4af2-9fcb-788670336e37", "https://cdn.thestorygraph.com/o9u4erbafu8srluwvferpv561egl")
 book4 = Book("I'm a Fan", "Sheena Patel", "Fiction - Contemporary", "https://app.thestorygraph.com/books/446ae4fa-df63-4e98-9333-edacd8592ca6", "https://cdn.thestorygraph.com/d5qtzy4ad6rg2fcd1wvrdbcduix1")
 book5 = Book("The Dry", "Jane Harper", "Fiction - Thriller", "https://app.thestorygraph.com/books/333650e7-b9ee-433a-a765-ffaaf2673e0f", "https://cdn.thestorygraph.com/vnvwdz2cjdqomz022w1u48x1vwfn")
-book6 = Book("The Devil You Know", "Dr Gwen Adshead", "Non-Fiction - Sociology", "https://app.thestorygraph.com/books/ea9f0822-0941-49dc-aa2a-ca3e0de7b161", "	https://cdn.thestorygraph.com/rf8qvil0eqyycjknh0o6qwgrzlda")
+book6 = Book("The Devil You Know", "Dr Gwen Adshead", "Non-Fiction - Sociology", "https://app.thestorygraph.com/books/ea9f0822-0941-49dc-aa2a-ca3e0de7b161", "https://cdn.thestorygraph.com/rf8qvil0eqyycjknh0o6qwgrzlda")
 
 book_list = [book1, book2, book3, book4, book5, book6]
 
-def add_book(self, new_book):
+def add_book(new_book):
     book_list.append(new_book)
 
-def delete_book(self, index):
-    book_list.remove(index)
+def delete_book(index):
+    book_list.pop(index)
 
 # def toggle_check_out(self, status):
 

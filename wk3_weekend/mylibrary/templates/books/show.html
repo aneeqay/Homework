@@ -14,4 +14,9 @@
     Genre: {{ book.genre }}
     </p></div>
 </section>
+<section class="delete">
+    <form action="/books/delete/{{ books.index(book) }}" method="post">
+        <input style="height:30px; width:50vh" type="submit" value="Delete">
+    </form>
+</section>
 {% endblock %}

@@ -48,12 +48,9 @@ footer {
     margin-top: 2rem;
 }
 
-/* .book-card {
+.book-card {
     display: grid;
-    /* flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: column; */
-} */
+}
 
 .book-text {
     text-align: center;
@@ -83,6 +80,11 @@ form {
     justify-content: center;
 }
 
-input[type="submit"] {
+.add {
     margin-left: 5px;
+}
+
+.delete {
+    display: flex;
+    justify-content: center;
 }

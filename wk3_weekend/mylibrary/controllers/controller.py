@@ -17,7 +17,7 @@ def books_index():
 @app.route("/books/<index>")
 def books_show(index):
     book = book_list[int(index)]
-    return render_template("books/show.html", book=book, index=index)
+    return render_template("books/show.html", book=book, index=index, books=book_list)
 
 
 @app.route("/books/new")
