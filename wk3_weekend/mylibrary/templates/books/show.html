@@ -1,7 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}  
-<h3>{{ book.title }}</h3>
-
-
+<section>
+    <br>
+    <img class="book-image" src="{{ book.image }}" width="220" height="350"/>
+    <div class="book-text">
+    <h3><a href="{{ book.link }}" target="_blank">{{ book.title }}</a></h3>
+    <p><em>by</em>
+    <br>
+    {{ book.author }}
+    <br>
+    <br>
+    Genre: {{ book.genre }}
+    </p></div>
+</section>
 {% endblock %}

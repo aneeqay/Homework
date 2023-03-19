@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <section>
+    <section class=book-card>
+      <p>
       {% for book in books %}  
-        <div class=book-card>
-        <p>
+        <div><br>
         <a href="/books/{{books.index(book)}}">
-        <img src="{{url_for('static', filename='bookimage.png')}}" width="60" height="70"/>
+        <img class="book-image" src="{{ book.image }}" width="220" height="350"/>
         </a></p>
-        <br>
-        <p class="book-text"><br>
-        <b>{{ book.title }}</b> 
+        <p class="book-text">
+        <a href="/books/{{books.index(book)}}"><b>{{ book.title }}</b></a> 
         <br>
         <i>by</i>
         <br>
         {{ book.author }}
         <br>
         <b>Genre: </b>{{ book.genre }}
-      {% endfor %}</p>
-        </div>
+      {% endfor %}
+        <br></div>
+      </p>
     </section>
 {% endblock %}

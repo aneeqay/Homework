@@ -2,16 +2,24 @@
 
 {% block content %}
     <h3>Add book to catalogue</h3>
-    <section class="book-form">
-
+<section class="book-form">
     <form action="/books" method="post">
       <label for="title">Book Title</label>
-      <input type="text" name="title" id="title" placeholder="Enter book title">
+      <input style="height:30px; width:50vh" type="text" name="title" id="title" placeholder="Enter book title" line-height="30px" >
+      <br>
       <label for="author">Author</label>
-      <input type="text" name="author" id="author" placeholder="Enter author">
+      <input style="height:30px; width:50vh" type="text" name="author" id="author" placeholder="Enter author">
+      <br>
       <label for="genre">Genre</label>
-      <input type="text" name="genre" id="genre" placeholder="Enter genre">
-      <input type="submit" value="Add">
+      <input style="height:30px; width:50vh" type="text" name="genre" id="genre" placeholder="Enter genre">
+      <br>
+      <label for="link"><a href="https://app.thestorygraph.com/">Storygraph</a> link</label>
+      <input style="height:30px; width:50vh" type="text" name="link" id="link" placeholder="Enter the link to the book's page on Storygraph">
+      <br>
+      <label for="image">Book image</label>
+      <input style="height:30px; width:50vh" type="text" name="image" id="image" placeholder="Enter a link to an image of the book e.g. from Storygraph">
+      <br>
+      <input style="height:30px; width:50vh" type="submit" value="Add">
     </form>
-    </section>
+</section>
 {% endblock %}

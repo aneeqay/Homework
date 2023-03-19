@@ -8,9 +8,9 @@ header {
 }
 
 h1 {
-    margin-left: 20px;
     display: flex;
     justify-content: center;
+    margin-left: 2rem;
 }
 
 li {
@@ -20,11 +20,15 @@ li {
 ul {
     display: flex;
     justify-content: center;
+    margin-right: 1rem;
 }
 
-li a {
+a {
     text-decoration: none;
     color: #04abac;
+}
+
+li > a {
     padding: 10px;
 }
 
@@ -41,13 +45,15 @@ footer {
     color: #00acac;
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
-.book-card {
-    display: flex;
+/* .book-card {
+    display: grid;
+    /* flex-wrap: wrap;
     justify-content: space-between;
-    flex-wrap: wrap;
-}
+    flex-direction: column; */
+} */
 
 .book-text {
     text-align: center;
@@ -56,10 +62,27 @@ footer {
 
 h3 {
     color: #04abac;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.book-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 18%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 .book-form {
     display: flex;
-    flex-direction: column;
-    color: #014040;
+    justify-content: center;
+}
+
+input[type="submit"] {
+    margin-left: 5px;
 }

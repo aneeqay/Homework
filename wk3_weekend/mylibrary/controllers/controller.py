@@ -30,7 +30,9 @@ def books_create():
     title = request.form["title"]
     author = request.form["author"]
     genre = request.form["genre"]
-    new_book = Book(title, author, genre, False)
+    link = request.form["link"]
+    image = request.form["image"]
+    new_book = Book(title, author, genre, link, image)
     add_book(new_book)
     return redirect("/books")
 
