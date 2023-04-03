@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+
+    <h2>Table of orders</h2>
+    <table>
+        <tr>
+            <th><b>Title</b></th>
+            <th><b>Customer</b></th>
+            <th><b>Order Date</b></th>
+            <th><b>Quantity</b></th>
+            <th><b>Further details</b></th>
+        </tr>
+        {% for order in order_list %}
+        <tr>
+            <td><a href = "/orders/{{ order_list.index(order) }}"">{{ order.title }}</a></td>
+            <td>{{order.customer_name}}</td>
+            <td>{{order.order_date}}</td>
+            <td>{{order.quantity}}</td>
+            <td>{{order.description}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

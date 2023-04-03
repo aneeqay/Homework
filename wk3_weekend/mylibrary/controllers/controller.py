@@ -11,13 +11,13 @@ def index():
 
 @app.route("/books")
 def books_index():
-    return render_template("books/index.html", title="Catalogue", books=book_list)
+    return render_template("books/index.html", books=book_list)
 
 
 @app.route("/books/<index>")
 def books_show(index):
     book = book_list[int(index)]
-    return render_template("books/show.html", book=book, index=index, books=book_list)
+    return render_template("books/show.html", book=book, index=index)
 
 
 @app.route("/books/new")
@@ -37,7 +37,7 @@ def books_create():
     return redirect("/books")
 
 
-@app.route("/books/delete/<index>", methods=["POST"])
+@app.route("/books/<index>/delete", methods=["POST"])
 def books_delete(index):
     delete_book(int(index))
     return redirect("/books")

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Specific order details</title>
+</head>
+<body>
+    <h1>{{ this_order.title }}</h1>
+    <section>
+        <br>
+        <p>{{ this_order.quantity }} units were ordered by
+             {{ this_order.customer_name }} on 
+             {{ this_order.order_date.strftime( "%d %B %Y" ) }}</p>
+        <br>
+        <p>Any other comments</p>
+        <p><em>{{ this_order.description }}</em></p>
+    </section>
+    <footer>
+        <br>
+        <p><a href ="/orders">Home</a></p>
+    </footer>
+</body>
+</html>

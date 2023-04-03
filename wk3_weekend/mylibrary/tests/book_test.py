@@ -54,11 +54,11 @@ class TestBook(unittest.TestCase):
         self.assertEqual("https://cdn.thestorygraph.com/rf8qvil0eqyycjknh0o6qwgrzlda", self.book6.image)
 
 
-    # def test_book_can_be_added(self):
-    #     book7 = Book("Hourglass", "Kieran Goddard", "Fiction - Contemporary", "https://app.thestorygraph.com/books/b4604950-f31c-48aa-925c-49865cce18c8", "https://cdn.thestorygraph.com/ba1l3mrzsenm7anffv5y9440cknk")
-    #     book_list = [self.book1, self.book2, self.book3, self.book4, self.book5, self.book6]
-    #     add_book(book7)
-    #     self.assertEqual(7, len(book_list))
+    def test_book_can_be_added(self):
+        book7 = Book("Hourglass", "Kieran Goddard", "Fiction - Contemporary", "https://app.thestorygraph.com/books/b4604950-f31c-48aa-925c-49865cce18c8", "https://cdn.thestorygraph.com/ba1l3mrzsenm7anffv5y9440cknk")
+        book_list = [self.book1, self.book2, self.book3, self.book4, self.book5, self.book6]
+        add_book(book7)
+        self.assertEqual(7, len(book_list))
 
     # def test_book_can_be_deleted(self):
     #     book_list = [self.book1, self.book2, self.book3, self.book4, self.book5, self.book6]
