@@ -13,14 +13,14 @@ Park.prototype.addDinosaur = function (dinosaur) {
 }
 
 Park.prototype.removeDinosaur = function(dinosaur){
-    indexPos = this.dinosaurs.indexOf(dinosaur)
+    let indexPos = this.dinosaurs.indexOf(dinosaur)
     this.dinosaurs.splice(indexPos,1)
 }
 
 Park.prototype.popDino = function () {
     let MostPopDino = this.dinosaurs[0]
     
-    for (dinosaur of this.dinosaurs) {
+    for (let dinosaur of this.dinosaurs) {
         if (dinosaur.guestsAttractedPerDay > MostPopDino.guestsAttractedPerDay)
         MostPopDino = dinosaur
 
@@ -30,7 +30,7 @@ Park.prototype.popDino = function () {
 
 Park.prototype.dinoBySpecies = function (species) {
     let speciesList = []
-    for (dinosaur of this.dinosaurs) {
+    for (let dinosaur of this.dinosaurs) {
         if (dinosaur.species === species) {
             speciesList.push(dinosaur)
         }
@@ -41,7 +41,7 @@ Park.prototype.dinoBySpecies = function (species) {
 Park.prototype.headCount = function(){
     let count = 0
 
-    for (dinosaur of this.dinosaurs) {
+    for (let dinosaur of this.dinosaurs) {
         count += dinosaur.guestsAttractedPerDay
     }
 
@@ -51,7 +51,7 @@ Park.prototype.headCount = function(){
 Park.prototype.headCountPerYear = function(){
     let count = 0
 
-    for (dinosaur of this.dinosaurs) {
+    for (let dinosaur of this.dinosaurs) {
         count += (dinosaur.guestsAttractedPerDay * 365)
     }
 
@@ -61,5 +61,12 @@ Park.prototype.headCountPerYear = function(){
 Park.prototype.yearlyTotal = function () {
     return (this.headCountPerYear() * this.ticketPrice)
 }
+
+Park.prototype.removeBySpecies = function (species) {
+    for (let dinosaur of this.dinosaurs) {
+        if (dinosaur.species === species) {
+            let indexPos = this.dinosaurs.indexOf(dinosaur)
+            this.dinosaurs.splice(indexPos, 1)
+}}}
 
 module.exports = Park

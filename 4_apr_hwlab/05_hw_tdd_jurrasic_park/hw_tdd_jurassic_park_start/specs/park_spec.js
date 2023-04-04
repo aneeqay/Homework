@@ -76,4 +76,16 @@ describe('Park', function() {
     assert.strictEqual(actual, (22*365*park.ticketPrice))
   });
 
+  it('should remove all dinosaurs by species', function () {
+    park.addDinosaur(stegosaurus)
+    park.addDinosaur(allosaurus)
+    park.removeBySpecies("blue")
+    actual = park.dinosaurs
+    assert.deepStrictEqual(actual, [stegosaurus])
+  })
+
+  it('should dict and stuff', function () {
+    
+  })
+
 });
