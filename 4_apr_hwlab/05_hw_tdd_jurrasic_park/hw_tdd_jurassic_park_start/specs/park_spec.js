@@ -9,10 +9,10 @@ describe('Park', function() {
   let allosaurus
 
   beforeEach(function () {
+    stegosaurus = new Dinosaur("stegosaurus", "herbivore", 10)
+    allosaurus = new Dinosaur("allosaurus", "carnivore", 12)
+    
     park = new Park("Jurassic Park", 100)
-    stegosaurus = new Dinosaur("pink", "herbivore", 10)
-    allosaurus = new Dinosaur("blue", "carnivore", 12)
-
   })
 
   it('should have a name', function () {
@@ -43,14 +43,14 @@ describe('Park', function() {
   it('should be able to find the dinosaur that attracts the most visitors', function(){
     park.addDinosaur(stegosaurus)
     park.addDinosaur(allosaurus)
-    actual = park.popDino()
+    actual = park.popularDino()
     assert.strictEqual(actual, allosaurus)
   });
 
   it('should be able to find all dinosaurs of a particular species', function () {
     park.addDinosaur(stegosaurus)
     park.addDinosaur(allosaurus)
-    actual = park.dinoBySpecies("blue")
+    actual = park.dinoBySpecies("allosaurus")
     assert.deepStrictEqual(actual, [allosaurus])
   });
 
@@ -79,13 +79,16 @@ describe('Park', function() {
   it('should remove all dinosaurs by species', function () {
     park.addDinosaur(stegosaurus)
     park.addDinosaur(allosaurus)
-    park.removeBySpecies("blue")
+    park.addDinosaur(allosaurus)
+    park.addDinosaur(allosaurus)
+    park.addDinosaur(allosaurus)
+    park.removeBySpecies("allosaurus")
     actual = park.dinosaurs
     assert.deepStrictEqual(actual, [stegosaurus])
   })
 
-  it('should dict and stuff', function () {
-    
+  it('should return an object with number of dinosaur by diet', function () {
+
   })
 
 });

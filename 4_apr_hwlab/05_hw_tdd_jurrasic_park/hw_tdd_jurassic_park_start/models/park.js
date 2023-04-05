@@ -13,14 +13,14 @@ Park.prototype.addDinosaur = function (dinosaur) {
 }
 
 Park.prototype.removeDinosaur = function(dinosaur){
-    let indexPos = this.dinosaurs.indexOf(dinosaur)
+    const indexPos = this.dinosaurs.indexOf(dinosaur)
     this.dinosaurs.splice(indexPos,1)
 }
 
-Park.prototype.popDino = function () {
+Park.prototype.popularDino = function () {
     let MostPopDino = this.dinosaurs[0]
     
-    for (let dinosaur of this.dinosaurs) {
+    for (const dinosaur of this.dinosaurs) {
         if (dinosaur.guestsAttractedPerDay > MostPopDino.guestsAttractedPerDay)
         MostPopDino = dinosaur
 
@@ -29,8 +29,8 @@ Park.prototype.popDino = function () {
 }
 
 Park.prototype.dinoBySpecies = function (species) {
-    let speciesList = []
-    for (let dinosaur of this.dinosaurs) {
+    const speciesList = []
+    for (const dinosaur of this.dinosaurs) {
         if (dinosaur.species === species) {
             speciesList.push(dinosaur)
         }
@@ -41,7 +41,7 @@ Park.prototype.dinoBySpecies = function (species) {
 Park.prototype.headCount = function(){
     let count = 0
 
-    for (let dinosaur of this.dinosaurs) {
+    for (const dinosaur of this.dinosaurs) {
         count += dinosaur.guestsAttractedPerDay
     }
 
@@ -49,24 +49,41 @@ Park.prototype.headCount = function(){
 }
 
 Park.prototype.headCountPerYear = function(){
-    let count = 0
+    return this.headCount() * 365
+    // let count = 0
 
-    for (let dinosaur of this.dinosaurs) {
-        count += (dinosaur.guestsAttractedPerDay * 365)
-    }
+    // for (const dinosaur of this.dinosaurs) {
+    //     count += (dinosaur.guestsAttractedPerDay * 365)
+    // }
 
-    return count
+    // return count
 }
 
 Park.prototype.yearlyTotal = function () {
     return (this.headCountPerYear() * this.ticketPrice)
 }
 
+// Park.prototype.removeBySpecies = function (species) {
+//     for (const dinosaur of this.dinosaurs) {
+//         if (dinosaur.species === species) {
+//             const indexPos = this.dinosaurs.indexOf(dinosaur)
+//             this.dinosaurs.splice(indexPos, 1)
+// }}}
+
 Park.prototype.removeBySpecies = function (species) {
-    for (let dinosaur of this.dinosaurs) {
-        if (dinosaur.species === species) {
-            let indexPos = this.dinosaurs.indexOf(dinosaur)
-            this.dinosaurs.splice(indexPos, 1)
-}}}
+    const speciesList = []
+    for (const dinosaur of this.dinosaurs) {
+        if (dinosaur.species !== species) {
+            speciesList.push(dinosaur)
+        }
+    }
+    this.dinosaurs = speciesList
+}
+
+Park.prototype.numberByDietType = function () {
+    const diet = {carnivore: 0;
+    }
+    diet[this.dinosaurs.diet]
+}
 
 module.exports = Park
