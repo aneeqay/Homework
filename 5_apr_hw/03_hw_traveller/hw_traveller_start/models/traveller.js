@@ -40,8 +40,7 @@ Traveller.prototype.getAllTransport = function () {
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
   transportList = this.getAllTransport();
-  return new Set(transportList)
-  };
-
+  return [... new Set(transportList)]
+};
 
 module.exports = Traveller;
