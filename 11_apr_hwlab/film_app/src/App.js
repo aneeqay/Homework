@@ -3,9 +3,7 @@ import FilmTable from './components/FilmTable';
 
 function App() {
   return (
-   <>
     <FilmTable />
-  </>
   )
 }
 

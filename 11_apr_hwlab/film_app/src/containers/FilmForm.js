@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const FilmForm = (onFilmSubmit) => {
+const FilmForm = ({onFilmSubmit}) => {
     const [filmName, setFilmName] = useState("")
     const [filmURL, setFilmURL] = useState("")
 
@@ -18,7 +18,8 @@ const FilmForm = (onFilmSubmit) => {
             id: Date.now()
         })
         setFilmName("")
-        setFilmURL("")}
+        setFilmURL("")
+    }
 
     return ( 
         <form onSubmit={handleSubmit}>

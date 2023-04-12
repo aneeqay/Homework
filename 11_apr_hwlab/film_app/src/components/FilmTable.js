@@ -38,7 +38,7 @@ const addFilm = film => {
 
     return ( 
         <>
-            <h1>Upcoming Film Releases for UK</h1>
+            <h2>Upcoming Film Releases for UK</h2>
             <ul>
                 {films.map((film) => 
                     <Film
