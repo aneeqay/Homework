@@ -16,7 +16,6 @@ const Chart = () => {
         .then(data => setChart(data.feed.entry))
       }
     
-    
 
     return ( 
         <>
