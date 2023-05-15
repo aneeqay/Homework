@@ -18,8 +18,7 @@ const RandomContainer = () => {
     }, [])
 
     const fetchFact = () => fetch("https://uselessfacts.jsph.pl/api/v2/facts/random").then(res => res.json()).then(data => setFact(data))
-    const fetchSpirits = () => fetch("www.thecocktaildb.com/api/json/v1/1/list.php?c=list",  {headers: {
-        'Accept': 'application/json'}}).then(res => console.log(res.json()).then(data => console.log(data.drinks)))
+    const fetchSpirits = () => fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php").then(res => console.log(res.json()).then(data => console.log(data.drinks)))
 
     const handleSelectedSpirit = chosenSpirit => setSpirits([...spirits, chosenSpirit])
 
