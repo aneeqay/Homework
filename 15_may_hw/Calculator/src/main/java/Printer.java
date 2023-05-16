@@ -17,7 +17,7 @@ public class Printer {
 
     public void print(int pages, int copies){
         int pagesPrinted = pages * copies;
-        if (this.paper > pagesPrinted && this.toner > pagesPrinted) {
+        if (this.paper >= pagesPrinted && this.toner >= pagesPrinted) {
             int newPages = this.paper - pagesPrinted;
             setPaperInPrinter(newPages);
             int newToner = this.toner - pagesPrinted;
