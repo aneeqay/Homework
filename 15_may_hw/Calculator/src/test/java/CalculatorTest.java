@@ -5,20 +5,20 @@ import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
 
-    Calculator calculator;
+    private Calculator calculator;
 
     @Before
-        public void before(){
+    public void before(){
         calculator = new Calculator();
     }
 
     @Test
-        public void canAdd(){
+    public void canAdd(){
         assertEquals(3, calculator.add(1, 2));
     }
 
     @Test
-        public void canSubtract(){
+    public void canSubtract(){
         assertEquals(10, calculator.subtract(20, 10));
     }
 

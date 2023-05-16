@@ -14,20 +14,18 @@ public class WaterBottle {
     }
 
     public int drink(){
-        if (this.volume > 0){
+        if (this.volume >= 10){
         int newVolume = this.volume - 10;
         setVolume(newVolume);
         return this.volume;}
         return this.volume;
     }
 
-    public int empty(){
+    public void empty(){
         setVolume(0);
-        return this.volume;
     }
 
-    public int fill(){
+    public void fill(){
         setVolume(100);
-        return this.volume;
     }
 }
