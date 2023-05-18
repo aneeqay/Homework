@@ -19,6 +19,18 @@ public class DeveloperTest {
     }
 
     @Test
+    public void canChangeName(){
+        sarah.setName("Wenjing");
+        assertEquals("Wenjing", sarah.getName());
+    }
+
+    @Test
+    public void cannotChangeName(){
+        sarah.setName(null);
+        assertEquals("Sarah", sarah.getName());
+    }
+
+    @Test
     public void hasNINumber(){
         assertEquals(5678, sarah.getNINumber());
     }
@@ -32,6 +44,12 @@ public class DeveloperTest {
     public void canRaiseSalary(){
         sarah.raiseSalary(9999.01);
         assertEquals(70000.00, sarah.getSalary(), 0.0);
+    }
+
+    @Test
+    public void cannotRaiseSalary(){
+        sarah.raiseSalary(-10);
+        assertEquals(60000.99, sarah.getSalary(), 0.0);
     }
 
     @Test

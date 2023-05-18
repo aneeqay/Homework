@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6651c2af-5a10-46d2-aa84-c3b48a030c67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/staff/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/staff/management/Director.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/staff/management/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/staff/techStaff/DatabaseAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/staff/techStaff/Developer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/DatabaseAdminTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/DeveloperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/staff/Employee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/staff/management/Manager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/ManagerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DirectorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../16_may_hw/Library/untitled/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_may_hw/Library/untitled/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../16_may_hw/Library/untitled/src/main/java/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_may_hw/Library/untitled/src/main/java/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/staff/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/staff/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DeveloperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DeveloperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/staff/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/staff/Employee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../1_mar_hw/Test-Functions-Homework-RB-AY" beforeDir="false" afterPath="$PROJECT_DIR$/../../1_mar_hw/Test-Functions-Homework-RB-AY" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
