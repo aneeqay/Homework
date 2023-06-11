@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class ShoppingBasket {
 
@@ -30,30 +28,19 @@ public class ShoppingBasket {
 
     public void addItem(Item item, int quantity){
         this.items.put(item, items.getOrDefault(item, 0) + quantity);
-        this.applyBogof(item);
+        this.applyBogof(item, quantity);
     }
 
-    public void applyBogof(Item item){
+    public void applyBogof(Item item, int quantity){
         if (item.isBogof()) {
-            int quantity = this.items.get(item);
-            int applicableForBogof = quantity / 2;
-            int notApplicableForBogof = quantity % 2;
+            int currentQuantity = this.items.get(item);
+            int applicableForBogof = currentQuantity / 2;
+            int notApplicableForBogof = currentQuantity % 2;
             this.total += (item.getPrice() * applicableForBogof);
             this.total += (item.getPrice() * notApplicableForBogof);
-        }
-        else this.total += (item.getPrice() * this.items.get(item));
+        } else {
+         this.total += (item.getPrice() * quantity);}
     }
-
-//    public void removeBogof(Item item){
-//        if (item.isBogof()) {
-//            int remainingQuantity = updatedQuantity % 2;
-//            int removedApplicableForBogof = quantity / 2;
-//            int removedNotApplicableForBogof = quantity % 2;
-//            this.total -= (item.getPrice() * removedApplicableForBogof);
-//            this.total -= (item.getPrice() * removedNotApplicableForBogof);
-//            this.total += (item.getPrice() * remainingQuantity);
-//        }
-//    }
 
     public void removeItem(Item item, int quantity) {
         int currentQuantity = items.get(item);
@@ -63,7 +50,6 @@ public class ShoppingBasket {
             items.put(item, currentQuantity - quantity);
         }
         if (item.isBogof()) {
-//            int remainingQuantity = currentQuantity - quantity;
             int applicableForBogof = quantity / 2;
             int notApplicableForBogof = quantity % 2;
             this.total -= (item.getPrice() * applicableForBogof);
@@ -71,20 +57,6 @@ public class ShoppingBasket {
         } else {
             this.total -= (item.getPrice() * quantity);
         }
-//        int updatedQuantity = this.items.get(item) - quantity;
-//        this.items.put(item, updatedQuantity);
-//        if (item.isBogof()) {
-//            int removedApplicableForBogof = quantity / 2;
-//            int removedNotApplicableForBogof = quantity % 2;
-//            this.total -= (item.getPrice() * removedApplicableForBogof);
-//            this.total -= (item.getPrice() * removedNotApplicableForBogof);
-//            int stillApplicableBogof = updatedQuantity / 2;
-//            int remainingQuantity = updatedQuantity % 2;
-//            this.total += (item.getPrice() * stillApplicableBogof);
-//            this.total += (item.getPrice() * remainingQuantity);
-//
-//        }
-//        else this.total -= (item.getPrice() * quantity);
     }
 
     public void emptyBasket(){
