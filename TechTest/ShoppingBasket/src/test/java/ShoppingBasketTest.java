@@ -38,7 +38,6 @@ public class ShoppingBasketTest {
         basket.removeItem(tomato, 1);
         int actual = basket.getItems().get(tomato);
         assertEquals(1, actual);
-        System.out.println(basket.getTotal());
         assertEquals(0.6, basket.getTotal(), 0.0);
     }
 
@@ -46,7 +45,6 @@ public class ShoppingBasketTest {
     public void canEmptyBasket(){
         basket.emptyBasket();
         assertEquals(0, basket.getTotal(), 0.0);
-        System.out.println(basket.getItems().keySet());
     }
 
     @Test
